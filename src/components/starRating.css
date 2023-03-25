@@ -1,0 +1,15 @@
+.appDisplay{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40px;
+}
+
+input[type='radio']{
+    display:none;   
+}
+
+.star{
+    cursor: pointer;
+    transition: color 200ms;
+}
