@@ -1,0 +1,34 @@
+
+
+.card{
+    width: 320px;
+    padding: 20px;
+    border: 1px solid #c9c9c9; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+     
+}
+
+
+
+.card-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -5px;
+   
+  }
+
+  #mini-box{
+    width:250px;
+    padding: 25px;
+    margin-top: auto;
+    display: grid;
+    align-items: center;
+  }
+
+  .movie-image{
+    max-width: 100%;
+  }
+

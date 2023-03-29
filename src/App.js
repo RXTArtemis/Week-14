@@ -10,19 +10,18 @@ import Review from './components/Review';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" id="background">
       <header>
         <h1>Movie Review App</h1>
       </header>
       <main>
       <MovieList />
-      {/* <ReviewList /> */}
+      <ReviewList />
       </main>
+      <br></br>
       <div>
-      <Movie />
-      <Stars />
-      <Review />
-      <ReviewForm />
+      {/* <Review /> */}
+      {/* <ReviewForm /> */}
       </div>
     </div>
   );

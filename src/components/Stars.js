@@ -23,4 +23,3 @@ const StarRating = ()=>{
 
 export default StarRating;
 
-//fix unique key ero
