@@ -92,7 +92,7 @@ export default function MovieList() {
 
     {allMovies.map((movie)=>{
        return ( 
-        <Movie className='grid' key={movie.id} movie={movie}/>
+        <Movie key={movie.id} movie={movie}/>
        )
     })}
     </>

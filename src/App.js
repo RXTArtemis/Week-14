@@ -14,15 +14,8 @@ function App() {
       <header>
         <h1>Movie Review App</h1>
       </header>
-      <main>
       <MovieList />
-      <ReviewList />
-      </main>
-      <br></br>
-      <div>
-      {/* <Review /> */}
-      {/* <ReviewForm /> */}
-      </div>
+      {/* <ReviewList /> */}
     </div>
   );
 }

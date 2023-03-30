@@ -3,6 +3,7 @@ import './MovieList.js';
 import ReviewForm from './ReviewForm.js';
 import StarRating from './Stars.js';
 import Review from './Review.js';
+import ReviewList from './ReviewList.js';
 
 
 
@@ -18,20 +19,14 @@ export default function Movie(props){
     
    
     return (
-        <div className="card"  id="card-container" key= {singleMovie.id}>
-                <div className="card-body">
-                    <div className='card-row'>
-                        <div className='column'>
+        <div className="card"   key= {singleMovie.id}>
                     <img className="movie-image" src = {props.movie.img}/> 
                      <h3 className="card-title">     
                      Title: {props.movie.title}</h3>
                             <h5>Year: {props.movie.year}</h5>
                             <h5>Info: {props.movie.info}</h5>
                             {<StarRating />}
-                            {<Review />}
-                            </div>
-                        </div>
-                 </div>
-        </div>
+                            {<ReviewList />}
+      </div>
     )
 }

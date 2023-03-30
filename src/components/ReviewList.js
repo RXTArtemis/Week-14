@@ -1,11 +1,37 @@
 import React from 'react';
-import './Review';
+import './Review.js';
 import { useState } from 'react';
-import Review from './Review.js';
+import ReviewForm from './ReviewForm.js';
 
-export default function ReviewList(){
-    const [allReviews,setAllReviews]=useState([],'');
-    let previousReviews=[{
+ 
+    
+
+    function postReview(){
+    
+        if(ReviewList.length === 0){
+            return <p className='text-muted' key={ReviewList.id}>No Reviews Yet</p>
+        }else{
+            return(
+                <>
+                {ReviewList.map((review)=>(
+                    <div
+                    key={review.id}
+                    className="bg-white border rounded shadow p-2 my-2 w-50"
+                    >
+                        {review.text}
+                    </div>
+                ))}
+                </>
+            );
+     }
+    }
+   
+
+
+
+ export default function ReviewList(){
+   
+    const [allReviews,setAllReviews]=useState([{
         id:0,
         review:"Really good movie.",
         rating:"",
@@ -59,38 +85,19 @@ export default function ReviewList(){
         id:10,
         review: "Great movie for any science and comic fan",
         rating: "",
-    },
-
-
-    {
-
-    }];
-
-    const onChange = (e)=>{
-        setAllReviews(e.target.value);
-    }
-    const onSubmit =(e)=>{
-        console.log("Form Submitted");
-    }
-    return(
-        <div className='form-container'>
-            <form onSubmit={onSubmit}>
-                <input className="reviews-form" type='text' 
-                placeholder='Leave your thoughts!' value={allReviews}
-                onChange={onChange}></input> 
-                <button type="submit" style={{background:"Gold"}}>
-                    Submit Review
-                </button>
-            </form>
-             {/* <div>
-                {previousReviews.map((previousReviews)=>{
+    }],'');
+    return (
+        <div>
+             <div key={allReviews.id}>
+                {allReviews.map((review)=>{
                     return ( 
-                        <Review key={previousReviews.id} previousReviews={previousReviews}/>
+                        <ReviewForm key={review.id} addReview={postReview}/>
                        )
                 })}
-            </div>  */}
+            </div> 
+            
     </div>
     );
-}
+ }
 
 
